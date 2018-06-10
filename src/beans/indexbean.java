@@ -6,6 +6,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import dao.tbluyeDAO;
 import model.uye;
 
 @SuppressWarnings("deprecation")
@@ -19,15 +20,18 @@ public class indexbean {
 	private String adsoyad;
 	
 	private List<uye> liste = new ArrayList<>();
-	
+	tbluyeDAO DB = new tbluyeDAO();
 	int i=0;
 	
+	/**
+	 * 
+	 */
 	public void ekle() {
 		uye u = new uye();
 		u.setId(liste.size()+1);
 		u.setAd(ad);
 		u.setSoyadi(soyad);
-		liste.add(u);		
+		DB.kaydet(u);		
 	}
 	
 	public void sil(int id) {
@@ -37,7 +41,7 @@ public class indexbean {
 	}
 	
 	public List<uye> getListe() {
-		return liste;
+		return DB.listele(new uye());
 	}
 	public void setListe(List<uye> liste) {
 		this.liste = liste;
