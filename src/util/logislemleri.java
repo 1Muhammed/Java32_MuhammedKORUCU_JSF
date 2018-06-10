@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package util;
 
 import model.tbllog;
@@ -12,12 +7,10 @@ import java.io.FileWriter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-/**
- *
- * @author vektorel
- */
 public class logislemleri {
-    Session ss;
+   
+	Session ss;
+	
     public void kaydet(tbllog t){
     
         ss = NewHibernateUtil.getSessionFactory().openSession();

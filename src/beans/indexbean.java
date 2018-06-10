@@ -7,11 +7,12 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import dao.tbluyeDAO;
-import model.uye;
+import model.tbluye;
 
 @SuppressWarnings("deprecation")
 @ManagedBean
 @SessionScoped
+
 public class indexbean {
 
 	private String ad;
@@ -19,15 +20,13 @@ public class indexbean {
 	
 	private String adsoyad;
 	
-	private List<uye> liste = new ArrayList<>();
+	private List<tbluye> liste = new ArrayList<>();
 	tbluyeDAO DB = new tbluyeDAO();
 	int i=0;
 	
-	/**
-	 * 
-	 */
+	
 	public void ekle() {
-		uye u = new uye();
+		tbluye u = new tbluye();
 		u.setId(liste.size()+1);
 		u.setAd(ad);
 		u.setSoyadi(soyad);
@@ -35,15 +34,15 @@ public class indexbean {
 	}
 	
 	public void sil(int id) {
-		liste.remove(id-1);
+		DB.Native_sil(id);
 		System.out.println(id+" Numaralý Müþteri Silindi");
 		
 	}
 	
-	public List<uye> getListe() {
-		return DB.listele(new uye());
+	public List<tbluye> getListe() {
+		return DB.ActiveList(new tbluye());
 	}
-	public void setListe(List<uye> liste) {
+	public void setListe(List<tbluye> liste) {
 		this.liste = liste;
 	}
 	public String getAdsoyad() {

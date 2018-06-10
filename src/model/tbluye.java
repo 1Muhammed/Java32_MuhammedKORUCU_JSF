@@ -8,16 +8,24 @@ import javax.persistence.Table;
 
 @Table
 @Entity
-public class uye {
+
+public class tbluye {
 	
 	  @Id
 	  @SequenceGenerator(name = "sq_uye",sequenceName = "sq_tbluye_id",
 	                      initialValue = 1,allocationSize = 1)
 	  @GeneratedValue(generator = "sq_uye")
+	  
 	private int id;
 	private String ad;
 	private String soyadi;
 	private int sil_id;
+	
+	
+	public tbluye() {
+		
+		this.sil_id=1;
+	}
 	
 	public int getSil_id() {
 		return sil_id;

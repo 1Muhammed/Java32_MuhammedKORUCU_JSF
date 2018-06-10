@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.util.Date;
@@ -13,18 +8,17 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-/**
- *
- * @author vektorel
- */
 @Table
 @Entity
+
 public class tbllog {
-    @Id
+    
+	@Id
     @SequenceGenerator(name = "sq_log",sequenceName = "sq_tbllog_id",
                         initialValue = 1,allocationSize = 1)
     @GeneratedValue(generator = "sq_log")
-    private long id;
+   
+	private long id;
     private Date tarih;
     private String sinif;
     private String method;
@@ -32,9 +26,6 @@ public class tbllog {
     private String hataicerigi;
     private long userid;
 
-    
-    
-    
     
     public long getId() {
         return id;

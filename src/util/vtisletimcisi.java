@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package util;
 
 import model.tbllog;
@@ -14,10 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
-/**
- *
- * @author vektorel
- */
 public class vtisletimcisi<T> implements icrud<T>{
     Session ss;
     Transaction tt;
@@ -114,6 +105,29 @@ public class vtisletimcisi<T> implements icrud<T>{
         return null;
         }
         
+    }
+    
+    @Override
+    public List<T> ActiveList(T t) {
+       try{
+        List<T> result;
+       ac();
+       Criteria cr = ss.createCriteria(t.getClass());
+       cr.add(Restrictions.eq("sil_id", 1));
+       result = cr.list();
+       kapat();
+       return result;  
+        }catch(Exception ex){
+            tbllog log = new  tbllog();
+            log.setHataicerigi(ex.toString());
+            log.setMethod("Ara");
+            log.setSinif(t.getClass().toString());
+            Date date = new Date();
+            log.setTarih(date);
+            logislemleri lg = new logislemleri();
+            lg.kaydet(log);            
+        return null;
+        }
     }
 
     @Override
