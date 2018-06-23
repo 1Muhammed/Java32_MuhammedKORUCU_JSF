@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/login")
+
 public class login extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
