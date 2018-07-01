@@ -8,20 +8,9 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>İlk JSF Uygulaması</title>
+	<title>Portal İlk Sayfa</title>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-		crossorigin="anonymous" />
 
-	<style>
-.row {
-	min-height: 10rem;
-	background-color: rgba(255, 0, 0, .1);
-}
-</style>
 
 </h:head>
 
@@ -29,95 +18,19 @@
 <h:body>
 	<h:form>
 
-		<div class="container mt-4">
-			<div
-				class="row align-items-center justify-content-center 
-			shadow-lg p-3 mb-5 rounded
-			">
-
-				<div class="input-group col-md-4">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="basic-addon1">@</span>
-					</div>
-					<h:inputText value="#{indexbean.ad}" type="text" class="form-control" placeholder="Kullanıcı Adı"
-						aria-label="Username" aria-describedby="basic-addon1" />
-				</div>
-
-				<div class="input-group col-md-4">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="basic-addon2">@</span>
-					</div>
-					<h:inputText value="#{indexbean.soyad}" type="text" class="form-control"
-						placeholder="Kullanıcı Soyadı" aria-label="Username"
-						aria-describedby="basic-addon1" />
-				</div>
-
-				<div class="col-md-8" style="text-align: right">
-					
-					<h:commandButton class="btn btn-outline-success"
-					 value="Müşteri Ekle" action="#{indexbean.ekle}"/>
-					
-				</div>
-
-
-			</div>
-
-
-			<div
-				class="row align-items-center justify-content-center 
-			shadow-lg p-3 mb-5 rounded">
-
-				<table class="table">
-					<thead class="thead-dark">
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col">Kullanıcı Adı</th>
-							<th scope="col">Kullanıcı Soyadı</th>
-							<th scope="col">İşlem</th>
-							
-						</tr>
-					</thead>
-					<tbody>
-					
-					<ui:repeat var="ls" value="#{indexbean.liste}">
-					<tr>
-							<th scope="row">#{ls.id}</th>
-							<td>#{ls.ad}</td>
-							<td>#{ls.soyadi}</td>
-							<td><h:commandButton value="Sil" 
-							class="btn btn-outline-danger"
-							action="#{indexbean.sil(ls.id)}"/></td>
-						</tr>				
-					
-					</ui:repeat>
-						
-						
-					</tbody>
-				</table>
-
-			</div>
-
-
-		</div>
 
 
 
 
 
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-			crossorigin="anonymous"></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-			integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-			crossorigin="anonymous"></script>
+
+
+
+
+
+
+
 
 	</h:form>
 </h:body>
