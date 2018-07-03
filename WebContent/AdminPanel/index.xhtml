@@ -9,47 +9,28 @@
 
 <h:head>
 	<title>Portal İlk Sayfa</title>
-	
-	 <link href="../resources/css/sidemenu.css" rel="stylesheet" />
+
+	 <link href="../resources/css/menu.css" rel="stylesheet" />
 </h:head>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-
-<nav class="navbar navbar-default sidebar" role="navigation">
-    <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>      
-    </div>
-    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Anasayfa<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ayarlar <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-          <ul class="dropdown-menu forAnimate" role="menu">
-            <li><a href="{{URL::to('createusuario')}}">Menü</a></li>
-            <li><a href="#">Profil Ayarları</a></li>
-            <li><a href="#">Üye Ayarları</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Informes</a></li>
-          </ul>
-        </li>          
-        <li ><a href="#">Mesajlar<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>        
-        <li ><a href="#">Üyeler<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
-          <li ><a href="#">İletişim<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<center>
+ <div class="row">
+        <h3>Portal Ana Sayfa</h3>
+        <div class="btn-group btn-breadcrumb">
+            <a href="index.jsf" class="btn btn-primary"><i class="glyphicon glyphicon-home"></i></a>
+            <a href="#" class="btn btn-info">Haberler</a>
+            <a href="#" class="btn btn-success">İş Akışı</a>
+             <a href="takvim.xhtml" class="btn btn-info">Takvim</a>
+            <a href="#" class="btn btn-success">Duyurular</a>
+            <a href="#" class="btn btn-info">Üyeler</a>
+             <a href="iletisim.jsf" class="btn btn-success">İletişim</a>
+        </div>
+	</div>
+</center>
 
 
 </html>
